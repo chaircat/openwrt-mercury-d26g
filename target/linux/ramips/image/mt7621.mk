@@ -498,6 +498,15 @@ define Device/mediatek_mt7621-eval-board
 endef
 TARGET_DEVICES += mediatek_mt7621-eval-board
 
+define Device/mercury_d26g
+  $(Device/uimage-lzma-loader)
+  DEVICE_MODEL := D26G
+  DEVICE_VENDOR := Mercury
+  DEVICE_PACKAGES := kmod-mt7615e wpad-basic
+  IMAGE_SIZE := 7872k
+endef
+TARGET_DEVICES += mercury_d26g
+
 define Device/MikroTik
   DEVICE_VENDOR := MikroTik
   BLOCKSIZE := 64k
